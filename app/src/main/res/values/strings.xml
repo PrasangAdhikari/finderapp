@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FinderApp</string>
+    <string name="register_form">Register Form</string>
+    <string name="email">Email</string>
+</resources>
