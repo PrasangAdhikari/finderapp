@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.AddFoundItemFragment">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/foundItemName"
+        android:layout_margin="10dp"
+        android:hint="Item Name"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/foundItemColor"
+        android:layout_margin="10dp"
+        android:hint="Item Color"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/foundItemLocation"
+        android:layout_margin="10dp"
+        android:hint="Location"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/foundItemPlace"
+        android:layout_margin="10dp"
+        android:hint="Place where you found it(e.g:school"
+        android:textSize="23dp"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/foundItemUserName"
+        android:layout_margin="10dp"
+        android:hint="Your Name "
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/foundItemPhoneNumber"
+        android:layout_margin="10dp"
+        android:hint="Your Mobile Number"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AddfoundItemBtn"
+        android:layout_margin="10dp"
+        android:text="Add Data"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+
+</LinearLayout>
