@@ -1,4 +1,4 @@
-package com.example.finderapp.Model;
+package com.example.finderapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
+import com.example.finderapp.Fragments.AddFoundItemFragment;
 import com.example.finderapp.Fragments.AddItemFragment;
 import com.example.finderapp.Fragments.NotificationFragment;
 import com.example.finderapp.Fragments.ProfileFragment;
@@ -18,13 +19,14 @@ import com.example.finderapp.Fragments.homeFragment;
 import com.example.finderapp.R;
 import com.example.finderapp.StartingActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity {
-FrameLayout frameLayout;
-BottomNavigationView bottomNavigationView;
+public class MainActivity2 extends AppCompatActivity {
+    FrameLayout frameLayout;
+    BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +47,7 @@ BottomNavigationView bottomNavigationView;
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull @org.jetbrains.annotations.NotNull MenuItem item) {
-                   //assigning fragment as null
+                    //assigning fragment as null
                     Fragment fragment=null;
                     switch (item.getItemId())
                     {
@@ -66,6 +68,7 @@ BottomNavigationView bottomNavigationView;
                         case R.id.profileMenu:
                             fragment=new ProfileFragment();
                             break;
+
                     }
                     //sets the selected Fragment into the framelayout
                     getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer,fragment)
@@ -82,11 +85,11 @@ BottomNavigationView bottomNavigationView;
         FirebaseUser mUser= FirebaseAuth.getInstance().getCurrentUser();
         if (mUser==null) {
             //if user not signed in then we will redirect this activity to login activity
-            Intent intent=new Intent(MainActivity.this, StartingActivity.class);
+            Intent intent=new Intent(MainActivity2.this, StartingActivity.class);
             startActivity(intent);
 
-            }
-
         }
+
     }
+}
 

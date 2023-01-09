@@ -12,7 +12,7 @@
         android:id="@+id/foundItemName"
         android:layout_margin="10dp"
         android:hint="Item Name"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold"/>
     <EditText
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
         android:id="@+id/foundItemColor"
         android:layout_margin="10dp"
         android:hint="Item Color"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold"/>
 
     <EditText
@@ -29,7 +29,7 @@
         android:id="@+id/foundItemLocation"
         android:layout_margin="10dp"
         android:hint="Location"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold"/>
     <EditText
         android:layout_width="match_parent"
@@ -37,7 +37,7 @@
         android:id="@+id/foundItemPlace"
         android:layout_margin="10dp"
         android:hint="Place where you found it(e.g:school"
-        android:textSize="23dp"
+        android:textSize="23sp"
         android:textStyle="bold"/>
     <EditText
         android:layout_width="match_parent"
@@ -45,7 +45,7 @@
         android:id="@+id/foundItemUserName"
         android:layout_margin="10dp"
         android:hint="Your Name "
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold"/>
 
     <EditText
@@ -62,7 +62,7 @@
         android:id="@+id/AddfoundItemBtn"
         android:layout_margin="10dp"
         android:text="Add Data"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold"/>
 
 

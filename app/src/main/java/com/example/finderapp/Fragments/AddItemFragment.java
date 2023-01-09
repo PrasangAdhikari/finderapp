@@ -68,7 +68,7 @@ public class AddItemFragment extends Fragment {
        //switch to navigate between fragments
         mSwitch=(SwitchCompat) view.findViewById(R.id.AddItemSwitch);
         mSwitch.setChecked(false);
-        getFragmentManager().beginTransaction().replace(R.id.AddItemContainer,new AddLostItemFragment())
+       getFragmentManager().beginTransaction().replace(R.id.AddItemContainer,new AddLostItemFragment())
                 .commit();
         mSwitch.setOnClickListener(new View.OnClickListener() {
             @Override

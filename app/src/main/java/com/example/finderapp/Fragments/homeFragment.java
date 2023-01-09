@@ -93,7 +93,7 @@ public class homeFragment extends Fragment {
     @Override
     public void onStop() {
         super.onStop();
-        //stops listening for data drom fire base
+        //stops listening for data  from fire base
         adapter.stopListening();
     }
 }

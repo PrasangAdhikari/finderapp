@@ -32,7 +32,7 @@ public class LostItemAdapter extends FirebaseRecyclerAdapter<Model,LostItemAdapt
     protected void onBindViewHolder(@NonNull LostItemAdapter.Viewholder holder, int position, @NonNull Model model) {
         Context context=holder.lostItemName.getContext();
 
-        //forloading lost items into recycler view
+        //for loading lost items into recycler view
         holder.lostItemName.setText(model.getItemName());
         holder.lostItemColor.setText(model.getItemColor());
         holder.lostItemLocation.setText(model.getItemLocation());

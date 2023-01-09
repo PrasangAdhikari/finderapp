@@ -11,6 +11,7 @@
     <androidx.appcompat.widget.SwitchCompat
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/AddItemSwitch"
         android:thumb="@drawable/thumb"
         app:track="@drawable/track"
         app:showText="true"
@@ -22,6 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/AddItemContainer"
+        android:layout_marginTop="30dp"
          />
 
 </LinearLayout>

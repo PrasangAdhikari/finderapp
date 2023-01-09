@@ -1,14 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Fragments.AddLostItemFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <EditText
+        android:id="@+id/LostItemName"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+    android:layout_margin="10dp"
+        android:hint="Item Name" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/LostItemColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_margin="10dp"
+        android:hint="Item Color"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/LostItemLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_margin="10dp"
+        android:hint="Location"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/LostItemPlace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="23sp"
+        android:layout_margin="10dp"
+        android:hint="place where you lost"
+
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/LostItemUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_margin="10dp"
+        android:hint="Your Name"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/LostItemPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_margin="10dp"
+        android:hint="Your Mobile Number "
+        android:textStyle="bold"/>
+    <Button
+        android:id="@+id/AddLostItemBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_margin="10dp"
+        android:hint="Add Data"
+        android:textStyle="bold"/>
+
+</LinearLayout>

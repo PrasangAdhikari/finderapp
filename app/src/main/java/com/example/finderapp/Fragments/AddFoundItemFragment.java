@@ -68,17 +68,17 @@ public class AddFoundItemFragment extends Fragment {
                 String ItemName = foundItemNameEditTxt.getText().toString();
                 String ItemColor = foundItemColorEditTxt.getText().toString();
                 String ItemLocation = foundItemLocationEditTxt.getText().toString();
-                String Itemplace = foundItemPlaceEditTxt.getText().toString();
+                String ItemPlace = foundItemPlaceEditTxt.getText().toString();
                 String UserName = foundItemUserEditTxt.getText().toString();
                 String UserPhoneNumber = foundItemPhoneNumberEditTxt.getText().toString();
 
                 //checking for empty fields
-                if (ItemName.isEmpty() || ItemColor.isEmpty() || ItemLocation.isEmpty() || Itemplace.isEmpty()
+                if (ItemName.isEmpty() || ItemColor.isEmpty() || ItemLocation.isEmpty() || ItemPlace.isEmpty()
                         || UserName.isEmpty() || UserPhoneNumber.isEmpty()) {
                     Toast.makeText(getContext(), "Please Enter All Details", Toast.LENGTH_SHORT).show();
                 } else {
                     //calling the methods to add data to firebase
-                    addItem(ItemName, ItemColor, ItemLocation, Itemplace, UserName, UserPhoneNumber);
+                    addItem(ItemName, ItemColor, ItemLocation, ItemPlace, UserName, UserPhoneNumber);
                 }
             }
         });

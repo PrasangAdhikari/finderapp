@@ -17,7 +17,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
-private FirebaseAuth mAuth;
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +45,7 @@ private FirebaseAuth mAuth;
     }
 
     private void switchToRegister() {
-        Intent intent = new Intent(this,RegisterActivity2.class);
+        Intent intent = new Intent(this,RegisterActivity.class);
         startActivity(intent);
         finish();
     }
@@ -80,7 +80,7 @@ private FirebaseAuth mAuth;
     }
 
     private void showMainActivity() {
-        Intent intent = new Intent(this,MainActivity.class);
+        Intent intent = new Intent(this,MainActivity2.class);
         startActivity(intent);
         finish();
     }

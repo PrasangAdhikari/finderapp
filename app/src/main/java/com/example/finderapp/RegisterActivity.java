@@ -17,13 +17,13 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class RegisterActivity2 extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register2);
+        setContentView(R.layout.activity_register);
         mAuth = FirebaseAuth.getInstance();
         if (mAuth.getCurrentUser() != null) {
             finish();
@@ -48,7 +48,7 @@ public class RegisterActivity2 extends AppCompatActivity {
     }
 
     private void switchToLogin() {
-        Intent intent = new Intent(this, LoginActivity.class);
+        Intent intent = new Intent(this, com.example.finderapp.LoginActivity.class);
         startActivity(intent);
         finish();
     }
@@ -73,18 +73,19 @@ public class RegisterActivity2 extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             User user=new User(firstName,lastName,email);
+
                             FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     showMainActivity();
                                 }
                             });
-                           Toast.makeText(RegisterActivity2.this,"successfully created account",Toast.LENGTH_SHORT).show();
-                           mAuth.getCurrentUser();
-                           mAuth.signOut();
-                           finish();
+                            Toast.makeText(RegisterActivity.this,"successfully created account",Toast.LENGTH_SHORT).show();
+                            mAuth.getCurrentUser();
+                            mAuth.signOut();
+                            finish();
                         } else {
-                            Toast.makeText(RegisterActivity2.this, "Authetication failed",
+                            Toast.makeText(RegisterActivity.this, "Authentication failed",
                                     Toast.LENGTH_LONG).show();
                         }
                     }

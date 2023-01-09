@@ -26,13 +26,13 @@ import org.jetbrains.annotations.NotNull;
 import java.util.HashMap;
 
 public class FoundItemAdapter extends FirebaseRecyclerAdapter<Model,FoundItemAdapter.Viewholder>{
-    public FoundItemAdapter(@NonNull FirebaseRecyclerOptions<Model>options){
+    public FoundItemAdapter (@NonNull FirebaseRecyclerOptions<Model>options){
         super(options);
     }
 
     @Override
     protected void onBindViewHolder(@NonNull FoundItemAdapter.Viewholder holder, int position, @NonNull Model model) {
-        Context context=holder.itemView.getContext();
+        Context context=holder.itemName.getContext();
 //for loading found items into recycler view
         holder.itemName.setText(model.getItemName());
         holder.itemColor.setText(model.getItemColor());

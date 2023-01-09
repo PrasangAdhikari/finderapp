@@ -6,40 +6,68 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnLogout"
-        android:text="Logout"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout" />
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Space
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome"
-        android:gravity="center"
+        android:layout_weight="1" />
+
+    <TextView
         android:id="@+id/textView"
-        android:textColor="#061EF3"/>
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Welcome"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="#061EF3" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <TextView
         android:id="@+id/tvFirstName"
-        android:text="First Name:"/>
-
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="First Name:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
         android:id="@+id/tvLastName"
-        android:text="Last Name:"/>
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tvEmail"
-        android:text="Email:"/>
+        android:text="Last Name:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5" />
+
+</LinearLayout>
