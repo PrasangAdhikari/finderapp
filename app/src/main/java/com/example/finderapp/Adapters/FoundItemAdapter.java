@@ -10,7 +10,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 import com.example.finderapp.Model.Model;
 import com.example.finderapp.R;
@@ -40,6 +39,7 @@ public class FoundItemAdapter extends FirebaseRecyclerAdapter<Model,FoundItemAda
         holder.itemPlace.setText(model.getItemPlace());
         holder.userName.setText(model.getUserName());
         holder.userPhoneNumber.setText(model.getUserPhoneNumber());
+
         holder.sendFoundNotificationBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,12 +54,12 @@ public class FoundItemAdapter extends FirebaseRecyclerAdapter<Model,FoundItemAda
                 //adding details to hashmap
                 sendDetails.put("userName",userName);
                 sendDetails.put("gmailId",gmail);
-                sendDetails.put("itemName",model.getItemName());
+                sendDetails.put("itemName", model.getItemName());
                 sendDetails.put("itemLocation",model.getItemLocation());
                 sendDetails.put("message","that item is mine");
 
                 //adding the notification to firebase
-                FirebaseDatabase.getInstance().getReference().child("notifications").child(userId)
+                FirebaseDatabase.getInstance().getReference().child("notification").child(userId)
                         .child(key).updateChildren(sendDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull  @NotNull Task<Void> task) {
@@ -92,7 +92,7 @@ public class FoundItemAdapter extends FirebaseRecyclerAdapter<Model,FoundItemAda
         public Viewholder(@NonNull View itemView) {
             super(itemView);
             //assigning the address of the materials
-            itemName=(TextView) itemView.findViewById(R.id.ItemNameTxt);
+            itemName= (TextView) itemView.findViewById(R.id.ItemNameTxt);
             itemColor=(TextView) itemView.findViewById(R.id.ItemColorTxt);
             itemLocation=(TextView) itemView.findViewById(R.id.ItemLocationTxt);
             itemPlace=(TextView) itemView.findViewById(R.id.ItemPlaceTxt);

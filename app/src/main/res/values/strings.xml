@@ -4,4 +4,19 @@
     <string name="email">Email</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="item_name">Item Name</string>
+    <string name="item_location">Item Location</string>
+    <string name="user_name">User Name</string>
+    <string name="gmail_id">Gmail Id</string>
+    <string name="message">Message</string>
+    <string name="item_color">Item Color</string>
+    <string name="location">Location</string>
+    <string name="place_where_you_found_it_e_g_school">Place where you found it(e.g:school)</string>
+    <string name="your_name">Your Name</string>
+    <string name="your_mobile_number">Your Mobile Number</string>
+    <string name="add_data">Add Data</string>
+    <string name="Item_name">Item Name</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
 </resources>

@@ -14,7 +14,6 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 
 import com.example.finderapp.Adapters.FoundItemAdapter;
-import com.example.finderapp.Adapters.NotificationAdapter;
 import com.example.finderapp.Model.Model;
 import com.example.finderapp.R;
 import com.firebase.ui.database.FirebaseRecyclerOptions;

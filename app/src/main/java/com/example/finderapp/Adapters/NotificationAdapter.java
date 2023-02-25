@@ -1,6 +1,5 @@
 package com.example.finderapp.Adapters;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +15,7 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 public class NotificationAdapter extends FirebaseRecyclerAdapter<Model,NotificationAdapter.Viewholder>{
     public NotificationAdapter (@NonNull FirebaseRecyclerOptions<Model> options){
+
         super(options);
     }
 

@@ -48,7 +48,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void switchToLogin() {
-        Intent intent = new Intent(this, com.example.finderapp.LoginActivity.class);
+        Intent intent = new Intent(this,LoginActivity.class);
         startActivity(intent);
         finish();
     }
@@ -72,7 +72,7 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            User user=new User(firstName,lastName,email);
+                            User user=new User( firstName, lastName,email);
 
                             FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override

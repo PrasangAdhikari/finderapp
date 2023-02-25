@@ -20,6 +20,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.FirebaseDatabase;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.HashMap;
 
 public class LostItemAdapter extends FirebaseRecyclerAdapter<Model,LostItemAdapter.Viewholder> {
@@ -60,10 +62,10 @@ public class LostItemAdapter extends FirebaseRecyclerAdapter<Model,LostItemAdapt
                 sendDetails.put("message","i found this item");
 
                 //adding data to firebase
-                FirebaseDatabase.getInstance().getReference().child("notifications ").child(userId)
+                FirebaseDatabase.getInstance().getReference().child("notification").child(userId)
                         .child(key).updateChildren(sendDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
-                            public void onComplete(@NonNull Task<Void> task) {
+                            public void onComplete(@NonNull @NotNull Task<Void> task) {
                                 if (task.isSuccessful())
                                 {
                                     //toast tp show the message
@@ -88,12 +90,12 @@ public class LostItemAdapter extends FirebaseRecyclerAdapter<Model,LostItemAdapt
     public LostItemAdapter.Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //the data objects are inflated into the xml file single_data_item
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.single_data_file,parent,false);
-        return  new LostItemAdapter.Viewholder(view);
+        return new Viewholder(view);
 
 
     }
 
-     class Viewholder extends RecyclerView.ViewHolder {
+     static class Viewholder extends RecyclerView.ViewHolder {
 
              TextView lostItemName, lostItemColor, lostItemLocation, lostItemPlace, lostItemUserName, lostItemUserPhoneNumber;
              Button sendNotificationBtn;

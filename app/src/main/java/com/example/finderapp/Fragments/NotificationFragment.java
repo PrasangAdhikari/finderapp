@@ -78,14 +78,14 @@ public class NotificationFragment extends Fragment {
 
         //Firebase recycler options to get the data from firebase database using model class and reference
         FirebaseRecyclerOptions<Model>options=
-                new FirebaseRecyclerOptions.Builder<Model>().
-                        setQuery(FirebaseDatabase.getInstance().getReference().child(userId),Model.class)
+                new FirebaseRecyclerOptions.Builder<Model>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("notification").child(userId),Model.class)
                         .build();
 
         //setting adapter to recycler view
         adapter=new NotificationAdapter(options);
         recyclerView.setAdapter(adapter);
-        return  view;
+        return view;
     }
     @Override
     public  void onStart()

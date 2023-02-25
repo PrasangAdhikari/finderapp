@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/foundItemName"
         android:layout_margin="10dp"
-        android:hint="Item Name"
+        android:hint="@string/Item_name"
         android:textSize="25sp"
         android:textStyle="bold"/>
     <EditText
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/foundItemColor"
         android:layout_margin="10dp"
-        android:hint="Item Color"
+        android:hint="@string/item_color"
         android:textSize="25sp"
         android:textStyle="bold"/>
 
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/foundItemLocation"
         android:layout_margin="10dp"
-        android:hint="Location"
+        android:hint="@string/location"
         android:textSize="25sp"
         android:textStyle="bold"/>
     <EditText
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/foundItemPlace"
         android:layout_margin="10dp"
-        android:hint="Place where you found it(e.g:school"
+        android:hint="@string/place_where_you_found_it_e_g_school"
         android:textSize="23sp"
         android:textStyle="bold"/>
     <EditText
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/foundItemUserName"
         android:layout_margin="10dp"
-        android:hint="Your Name "
+        android:hint="@string/your_name"
         android:textSize="25sp"
         android:textStyle="bold"/>
 
@@ -53,15 +53,15 @@
         android:layout_height="wrap_content"
         android:id="@+id/foundItemPhoneNumber"
         android:layout_margin="10dp"
-        android:hint="Your Mobile Number"
-        android:textSize="25dp"
+        android:hint="@string/your_mobile_number"
+        android:textSize="25sp"
         android:textStyle="bold"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/AddfoundItemBtn"
         android:layout_margin="10dp"
-        android:text="Add Data"
+        android:text="@string/add_data"
         android:textSize="25sp"
         android:textStyle="bold"/>
 
