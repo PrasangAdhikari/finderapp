@@ -37,7 +37,6 @@ public class LoginActivity extends AppCompatActivity {
     ProgressDialog progressBar;
     SignInButton signInButton;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,9 +97,9 @@ public class LoginActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                                    DatabaseReference myRef = database.getReference().child("people");
+                                    DatabaseReference myRef = database.getReference().child("users");
 
-                                    //Hashmap to store the userdetails and setting it to fireabse
+                                    //Hashmap to store the user details and setting it to firebase
                                     HashMap<String, Object> user_details = new HashMap<>();
 
                                     //Accessing the user details from gmail

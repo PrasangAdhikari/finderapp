@@ -25,12 +25,14 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity2 extends AppCompatActivity {
+
     FrameLayout frameLayout;
     NavigationBarView navigationBarView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
 
         //assigning frame layout resource file to show fragments
         frameLayout=(FrameLayout) findViewById(R.id.FragmentContainer);
